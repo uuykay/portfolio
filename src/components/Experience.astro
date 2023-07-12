@@ -1,0 +1,27 @@
+---
+export interface Props {
+  jobTitle: string;
+  imgSrc: string;
+  imgAlt: string;
+  company: string;
+  dateFrom: string;
+  dateTo: string;
+  location: string;
+}
+
+const { jobTitle, imgSrc, imgAlt, company, dateFrom, dateTo, location } =
+  Astro.props;
+---
+
+<div class="grid grid-cols-5 gap-1">
+  <div>
+    <img src={imgSrc} alt={imgAlt} />
+  </div>
+  <div class="col-span-4 pl-4">
+    <h3 class="font-bold">{jobTitle}</h3>
+    <p>{company}</p>
+    <p>{dateFrom} - {dateTo}</p>
+    <p>{location}</p>
+    <slot />
+  </div>
+</div>
