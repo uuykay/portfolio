@@ -3,25 +3,31 @@ import Layout from "@layouts/Layout.astro";
 import atlassian from "../images/atlassian.jpg";
 import cluey from "../images/cluey.jpg";
 import Experience from "@components/Experience.astro";
+import ListDisc from "@components/ListDisc.astro";
+import Section from "@components/Section.astro";
+import H2 from "@components/H2.astro";
+import Hr from "@components/Hr.astro";
+import ListItem from "@components/ListItem.astro";
+import Paragraph from "@components/Paragraph.astro";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="William Kuang. Full Stack Software Engineer.">
   <main class="max-w-xl mx-auto p-4">
-    <section class="mb-3">
+    <Section>
       <h1 class="mb-3 text-5xl font-bold">William Kuang</h1>
-      <p class="font-bold">Software Engineer</p>
-    </section>
-    <section class="mb-3">
-      <h2 class="mb-2 font-bold">About</h2>
-      <p>
+      <p class="font-bold">Full Stack Software Engineer</p>
+    </Section>
+    <Section>
+      <H2>About</H2>
+      <Paragraph>
         I'm a passionate and proactive front-end developer comfortable working
         in agile teams composed of designers, project managers, marketers, SEO
         experts, QA, and other developers alike. I also have roots in the
         startup space, working closely with founders in a truly lean team.
-      </p>
-    </section>
-    <section class="mb-3">
-      <h2 class="mb-2 font-bold">Experience</h2>
+      </Paragraph>
+    </Section>
+    <Section>
+      <H2>Experience</H2>
       <Experience
         jobTitle="Software Engineer"
         imgSrc={atlassian}
@@ -31,7 +37,7 @@ import Experience from "@components/Experience.astro";
         dateTo="Present"
         location="Sydney, New South Wales, Australia"
       />
-      <hr class="my-3" />
+      <Hr />
       <Experience
         jobTitle="Front-end Developer"
         imgSrc={cluey}
@@ -42,44 +48,46 @@ import Experience from "@components/Experience.astro";
         location="Sydney, New South Wales, Australia"
       >
         <div class="mt-3">
-          <p class="mb-3">
+          <Paragraph>
             Technical lead for the SEO critical customer website for the
             company, working collaboratively with the marketing team, designers,
             and product owners to deliver stunning, consistent, and accessible
             UI experiences.
-          </p>
-          <ul class="list-disc">
-            <li>
+          </Paragraph>
+          <ListDisc>
+            <ListItem>
               Managed the corporate website's local, staging, and production
               environments together with deployment workflows.
-            </li>
-            <li>
+            </ListItem>
+            <ListItem>
               Crafted reusable React components for stateful interactive
               experiences.
-            </li>
-            <li>
+            </ListItem>
+            <ListItem>
               Authored bespoke CSS without the need for a framework (e.g.
               Bootstrap) to achieve design perfect UI with modern CSS tooling
               including SASS (SCSS), CSS Flexbox, and CSS Grid.
-            </li>
-            <li>
+            </ListItem>
+            <ListItem>
               Composed code compatible with modern and legacy browsers alike
               (IE11, Chrome, Firefox, Safari, and Edge).
-            </li>
-            <li>
+            </ListItem>
+            <ListItem>
               Implemented responsive development to turn design into reality for
-              a number of complex UI components such as the newly deployed blog
-              https://clueylearning.com.au/blog
-            </li>
-            <li>
+              a number of complex UI components such as the <a
+                href="https://clueylearning.com.au/blog"
+                target="_blank">newly crafted blog</a
+              >
+            </ListItem>
+            <ListItem>
               Architected a reusable, component based UI, allowing the
               non-development marketing team to compose beautifully consistent
               pages within a familiar Wordpress interface.
-            </li>
-          </ul>
+            </ListItem>
+          </ListDisc>
         </div>
       </Experience>
-      <hr class="my-3" />
-    </section>
+      <Hr />
+    </Section>
   </main>
 </Layout>
