@@ -6,11 +6,20 @@ export interface Props {
   company: string;
   dateFrom: string;
   dateTo: string;
+  duration?: string;
   location: string;
 }
 
-const { jobTitle, imgSrc, imgAlt, company, dateFrom, dateTo, location } =
-  Astro.props;
+const {
+  jobTitle,
+  imgSrc,
+  imgAlt,
+  company,
+  dateFrom,
+  dateTo,
+  duration,
+  location,
+} = Astro.props;
 ---
 
 <div class="grid grid-cols-5 gap-1">
@@ -20,7 +29,7 @@ const { jobTitle, imgSrc, imgAlt, company, dateFrom, dateTo, location } =
   <div class="col-span-4 pl-4">
     <h3 class="font-bold">{jobTitle}</h3>
     <p>{company}</p>
-    <p>{dateFrom} - {dateTo}</p>
+    <p>{dateFrom} - {dateTo}{duration && " · " + duration}</p>
     <p>{location}</p>
     <slot />
   </div>
