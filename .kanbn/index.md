@@ -10,11 +10,12 @@ completedColumns:
 ## Backlog
 
 - [add-freelance-experience](tasks/add-freelance-experience.md)
-- [add-blog-section-and-blog-articles](tasks/add-blog-section-and-blog-articles.md)
 
 ## Todo
 
 ## In Progress
+
+- [add-blog-section-and-blog-articles](tasks/add-blog-section-and-blog-articles.md)
 
 ## Done
 
