@@ -5,6 +5,7 @@ export interface Props {
 }
 import favicon from "../images/favicon.png";
 const { title, metaDescription } = Astro.props;
+import { ViewTransitions } from "astro:transitions";
 ---
 
 <!DOCTYPE html>
@@ -15,6 +16,7 @@ const { title, metaDescription } = Astro.props;
     <meta name="description" content={metaDescription} />
     <link rel="icon" type="image/svg+xml" href={favicon} />
     <title>{title}</title>
+    <ViewTransitions />
   </head>
   <body>
     <slot />
