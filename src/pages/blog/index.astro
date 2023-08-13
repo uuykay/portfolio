@@ -1,0 +1,41 @@
+---
+import Layout from "@layouts/Layout.astro";
+import atlassian from "@images/atlassian.jpg";
+import cluey from "@images/cluey.jpg";
+import skyciv from "@images/skyciv.jpg";
+import Experience from "@components/Experience.astro";
+import ListDisc from "@components/ListDisc.astro";
+import Section from "@components/Section.astro";
+import H2 from "@components/H2.astro";
+import Hr from "@components/Hr.astro";
+import ListItem from "@components/ListItem.astro";
+import Paragraph from "@components/Paragraph.astro";
+import BackgroundScrollWrapper from "@components/BackgroundScrollWrapper.astro";
+import Nav from "@components/Nav.astro";
+import { BLOG_ROUTE } from "@constants/routes";
+---
+
+<Layout
+  title="William Kuang. Full Stack Software Engineer."
+  metaDescription={`A passionate and proactive full-stack software engineer comfortable
+working in agile teams composed of designers, project managers,
+marketers, SEO experts, QA, and other developers alike.`}
+>
+  <BackgroundScrollWrapper>
+    <main class="max-w-3xl mx-auto p-4">
+      <Section>
+        <h1 class="mb-3 text-5xl font-bold">William Kuang</h1>
+        <p class="font-bold">Full Stack Software Engineer</p>
+      </Section>
+      <Nav activeRoute={BLOG_ROUTE} />
+      <Section>
+        <H2>About</H2>
+        <Paragraph>
+          A collection of thoughts spanning my career across bootstrapped
+          startups, funded startups, and enterprise companies.
+        </Paragraph>
+        <Paragraph>A work in progress.</Paragraph>
+      </Section>
+    </main>
+  </BackgroundScrollWrapper>
+</Layout>

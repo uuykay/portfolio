@@ -1,8 +1,8 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import atlassian from "../images/atlassian.jpg";
-import cluey from "../images/cluey.jpg";
-import skyciv from "../images/skyciv.jpg";
+import atlassian from "@images/atlassian.jpg";
+import cluey from "@images/cluey.jpg";
+import skyciv from "@images/skyciv.jpg";
 import Experience from "@components/Experience.astro";
 import ListDisc from "@components/ListDisc.astro";
 import Section from "@components/Section.astro";
@@ -11,6 +11,8 @@ import Hr from "@components/Hr.astro";
 import ListItem from "@components/ListItem.astro";
 import Paragraph from "@components/Paragraph.astro";
 import BackgroundScrollWrapper from "@components/BackgroundScrollWrapper.astro";
+import Nav from "@components/Nav.astro";
+import { BASE_ROUTE } from "@constants/routes";
 ---
 
 <Layout
@@ -25,6 +27,7 @@ marketers, SEO experts, QA, and other developers alike.`}
         <h1 class="mb-3 text-5xl font-bold">William Kuang</h1>
         <p class="font-bold">Full Stack Software Engineer</p>
       </Section>
+      <Nav activeRoute={BASE_ROUTE} />
       <Section>
         <H2>About</H2>
         <Paragraph>
@@ -34,8 +37,8 @@ marketers, SEO experts, QA, and other developers alike.`}
         </Paragraph>
         <Paragraph>
           I have worked across companies of all sizes, from the humble
-          bootstrapped startup, funded scaleup, and hypergrowth enterprise stage
-          companies.
+          bootstrapped startup, funded scaleup, and mature enterprise stage
+          companies seeking growth through experimentation.
         </Paragraph>
       </Section>
       <Section>

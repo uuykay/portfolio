@@ -1,0 +1,15 @@
+---
+export interface Props {
+  href: string;
+  active?: boolean;
+}
+
+const { href, active } = Astro.props;
+
+const baseClasses =
+  "text-blue-600 hover:underline hover:text-blue-800 visited:text-purple-600";
+
+const classes = active ? `${baseClasses} font-bold` : baseClasses;
+---
+
+<a href={href} class={classes}><slot /></a>
