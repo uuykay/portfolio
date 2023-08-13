@@ -1,0 +1,40 @@
+---
+import { BASE_ROUTE, FREELANCING_ROUTE, BLOG_ROUTE } from "@constants/routes";
+import Anchor from "@components/Anchor.astro";
+
+export interface Props {
+  activeRoute?: string;
+}
+
+const routeConfig = [
+  {
+    display: "Full Time Experience",
+    route: BASE_ROUTE,
+  },
+  {
+    display: "Freelancing Experience",
+    route: FREELANCING_ROUTE,
+  },
+  {
+    display: "Blog",
+    route: BLOG_ROUTE,
+  },
+];
+---
+
+<nav class="mb-3">
+  {
+    routeConfig.map((routeConfigItem, index) => {
+      const isNotLast = index !== routeConfig.length - 1;
+      const isActiveRoute = Astro.props.activeRoute === routeConfigItem.route;
+      return (
+        <>
+          <Anchor href={routeConfigItem.route} active={isActiveRoute}>
+            {routeConfigItem.display}
+          </Anchor>
+          {isNotLast && <span class="font-black">&centerdot;</span>}
+        </>
+      );
+    })
+  }
+</nav>
