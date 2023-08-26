@@ -13,6 +13,7 @@ import Paragraph from "@components/Paragraph.astro";
 import BackgroundScrollWrapper from "@components/BackgroundScrollWrapper.astro";
 import Nav from "@components/Nav.astro";
 import { BASE_ROUTE } from "@constants/routes";
+import { Image } from "@astrojs/image/components";
 ---
 
 <Layout
@@ -46,7 +47,6 @@ marketers, SEO experts, QA, and other developers alike.`}
         <Experience
           jobTitle="Software Engineer"
           imgSrc={atlassian}
-          imgAlt="Atlassian"
           company="Atlassian"
           dateFrom="Oct 2020"
           dateTo="Present"
@@ -56,7 +56,6 @@ marketers, SEO experts, QA, and other developers alike.`}
         <Experience
           jobTitle="Front-end Developer"
           imgSrc={cluey}
-          imgAlt="Cluey"
           company="Cluey"
           dateFrom="Dec 2018"
           dateTo="Oct 2020"
@@ -107,7 +106,6 @@ marketers, SEO experts, QA, and other developers alike.`}
         <Experience
           jobTitle="Head of Development"
           imgSrc={skyciv}
-          imgAlt="SkyCiv"
           company="SkyCiv Cloud Engineering Software"
           dateFrom="Aug 2018"
           dateTo="Dec 2018"
@@ -145,7 +143,6 @@ marketers, SEO experts, QA, and other developers alike.`}
         <Experience
           jobTitle="Web Developer"
           imgSrc={skyciv}
-          imgAlt="SkyCiv"
           company="SkyCiv Cloud Engineering Software"
           dateFrom="Jul 2016"
           dateTo="Aug 2018"

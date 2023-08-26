@@ -1,9 +1,10 @@
 ---
 import { Image } from "@astrojs/image/components";
+
 export interface Props {
   jobTitle: string;
-  imgSrc: string;
-  imgAlt: string;
+  imgSrc: ImageMetadata;
+  imgAlt?: string;
   company: string;
   dateFrom: string;
   dateTo: string;
@@ -21,6 +22,8 @@ const {
   duration,
   location,
 } = Astro.props;
+
+const alt = imgAlt ? imgAlt : company;
 ---
 
 <style>
@@ -38,7 +41,7 @@ const {
 
 <div class="grid grid-cols-5 gap-1">
   <div>
-    <Image src={imgSrc} alt={imgAlt} width={100} height={100} />
+    <Image src={imgSrc} alt={alt} />
   </div>
   <div class="col-span-4 pl-4">
     <h3 class="font-bold">{jobTitle}</h3>
