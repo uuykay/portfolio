@@ -13,6 +13,8 @@ completedColumns:
 
 ## In Progress
 
+- [try-astro-images](tasks/try-astro-images.md)
+
 ## Done
 
 - [add-freelance-experience](tasks/add-freelance-experience.md)
