@@ -8,6 +8,6 @@
       "@images/*": ["src/images/*"],
       "@constants/*": ["src/constants/*"]
     },
-    "types": ["@astrojs/image/client"]
+    "types": ["astro/client"]
   }
 }

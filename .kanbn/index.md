@@ -13,10 +13,9 @@ completedColumns:
 
 ## In Progress
 
-- [try-astro-images](tasks/try-astro-images.md)
-
 ## Done
 
+- [try-astro-images](tasks/try-astro-images.md)
 - [add-freelance-experience](tasks/add-freelance-experience.md)
 - [add-blog-section-and-blog-articles](tasks/add-blog-section-and-blog-articles.md)
 - [fix-favicon](tasks/fix-favicon.md)
