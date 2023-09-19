@@ -7,7 +7,4 @@ export default defineConfig({
   integrations: [tailwind()],
   site: "https://uuykay.github.io",
   base: BASE_ROUTE,
-  experimental: {
-    viewTransitions: true,
-  },
 });
